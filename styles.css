@@ -1,0 +1,293 @@
+/* Estilos CSS */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #1f1f1f; /* Cor de fundo para o tema escuro */
+  color: #fff; /* Cor do texto para o tema escuro */
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 10px solid #f3f3f3;
+  border-top: 10px solid #3311f1;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: spin 2s linear infinite;
+  z-index: 9999;
+
+} 
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Classe para ocultar elementos durante o carregamento */
+.hidden {
+  display: none;
+}
+
+header {
+  background-color: #333; /* Cor de fundo para o cabeçalho */
+  padding: 20px 0;
+}
+
+header h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #fff; /* Cor do texto para o cabeçalho */
+}
+
+.section {
+  padding: 50px 0;
+  color: #fff; /* Cor do texto para as seções */
+}
+
+.section h2 {
+  margin-bottom: 20px;
+}
+
+/*.project {
+  border: 1px solid #fff;
+  border-radius: 5px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.project h3 {
+  margin-bottom: 10px;
+} */
+
+footer {
+  background-color: #333; /* Cor de fundo para o rodapé */
+  padding: 20px 0;
+  text-align: center;
+  color: #fff; /* Cor do texto para o rodapé */
+}
+
+/* Estilos CSS */
+/* Estilos para dispositivos com largura até 768px */
+@media screen and (max-width: 768px) {
+  .profile {
+    text-align: center;
+  }
+
+  .profile img {
+    float: none;
+    margin-bottom: 20px;
+  }
+}
+
+/* Estilos para dispositivos com largura até 480px */
+@media screen and (max-width: 480px) {
+  .profile h1 {
+    font-size: 1.5em;
+  }
+
+  .profile p {
+    font-size: 0.8em;
+  }
+
+  /* Adicione mais ajustes conforme necessário para dispositivos menores */
+}
+
+/* aqui ataca a foto para ficar em formato circulo*/
+div.img-foto,
+.foto {
+  border-radius: 50%;
+}
+
+div.container-logo,
+h1:hover {
+  color: rgb(0, 47, 255);
+}
+
+/* area das li */
+
+div.technologies-wrapper > ul.parent{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    justify-content: space-between ;
+    margin-left: 20px;
+}
+
+div.technologies-wrapper > ul.parent:hover{
+    color: #1bca73;
+}
+
+
+
+
+
+/* cards*/
+
+/*section div.card, div.card2{
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #4b4747;
+	border-radius: 10px;
+	box-shadow: 0 4px 8px 0 rgba(49, 3, 3, 0.2);
+	padding: 20px;
+	margin: 20px;
+	width: 300px;
+  height: 14rem;
+  display: flex;
+  float: left;
+	
+	
+}*/
+
+
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+
+
+
+.card, .card2 {
+  width: 300px;
+  height: 250px;
+  border-radius: 10px;
+  background-color: #4b4747;
+  margin-right: 10px; /* Ajuste o espaçamento entre os cards conforme necessário */
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Necessário para a animação */
+  overflow: hidden; /* Necessário para a animação */
+
+  
+}
+
+
+.card-container{
+  margin-bottom: 57px;
+}
+
+
+
+/* cor do texto*/
+section div.card2>p{
+  color: #1bca73;
+ }
+
+
+ /*  cor do texto */
+ section div.card>p{
+  color: #1bca73;
+ }
+
+ /*tamanho do texto do projeto*/
+
+
+
+
+
+
+
+ section div.card{
+  position: relative;
+
+ }
+
+ section div.card2{
+  position: relative;
+ }
+
+ /*Animação do cards*/
+
+ section div.card:hover{
+  top:-2px;
+  border-bottom:3px solid #524e4e;
+  transition: all .2s ease-in-out;
+  
+ }
+
+ section div.card2:hover{
+  top:-2px;
+  border-bottom:3px solid #524e4e;
+  transition: all .2s ease-in-out;
+  
+ }
+
+
+
+ /* torna as lista de tecnologia responsivo*/
+
+ 
+
+
+/* Estilo para telas menores */
+@media screen and (max-width: 768px) {
+  div.technologies-wrapper > ul.parent {
+      grid-template-columns: 1fr; /* Muda para uma única coluna em telas menores */
+      margin-left: 0; /* Remove o deslocamento lateral */
+  }
+}
+
+
+/* Estilo para telas menores */
+@media screen and (max-width: 768px) {
+  .card-container {
+      flex-direction: column; /* Altera para uma coluna em telas menores */
+      align-items: center; /* Alinha os itens ao centro horizontalmente */
+  }
+
+  .card {
+    margin-bottom: 30px; /* Espaçamento inferior aumentado para telas menores */
+}
+}
+
+
+/* botões*/
+
+.btn {
+  display: inline-block;
+  background-color: #1bca73;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  position: absolute; /* Coloca o botão sobre o card */
+  bottom: -40px; /* Esconde o botão abaixo do card */
+  left: 50%;
+  transform: translateX(-50%); /* Centraliza horizontalmente */
+  opacity: 0; /* Torna o botão invisível inicialmente */
+  transition: bottom 0.3s, opacity 0.3s; /* Adiciona uma transição suave */
+}
+
+.card:hover .btn {
+  bottom: 20px; /* Exibe o botão abaixo do card */
+  opacity: 1; /* Torna o botão visível */
+}
+
+.card2:hover .btn {
+  bottom: 20px; /* Exibe o botão abaixo do card */
+  opacity: 1; /* Torna o botão visível */
+}
+
+
+.foguete {
+  width: 100px; /* Defina a largura desejada para a foto */
+  height: auto; /* Mantém a proporção da imagem */
+}
